@@ -23,7 +23,7 @@ class PluginParser(object):
         for root,  dirs,  files in os.walk(folder):
             for f in files:
                 if f.endswith(extension):
-                    path = root + '/' + f
+                    path = os.path.join(root, f)
                     fileList.append(path)
 
         fileList = sorted(fileList)
